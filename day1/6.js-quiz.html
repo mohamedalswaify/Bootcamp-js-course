@@ -1,0 +1,14 @@
+<script>
+    var x = Math.round(Math.random() * 10);
+    var y = Math.round(Math.random() * 10);
+    // var answer = parseInt(prompt("What's " + x + " * " + y + " ?"));
+    var answer = parseInt(prompt(`What's ${x} * ${y} ?`));
+
+    if (answer == x*y) {
+        document.write("<h1>Correct</h1>");
+    }
+    else {
+        document.write("<h1>Wrong</h1>");
+    }
+
+</script>

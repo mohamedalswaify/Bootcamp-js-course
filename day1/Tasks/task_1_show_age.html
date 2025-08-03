@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1 - Show Age</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3ff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 1: Show Age</h2>
+
+  <label for="ageInput">Enter your age:</label>
+  <input type="number" id="ageInput">
+  <button onclick="showAge()">Show Age</button>
+
+  <div id="ageResult" class="output"></div>
+
+  <script>
+    function showAge() {
+      let age = document.getElementById("ageInput").value;
+      if (age.trim() === "") {
+        document.getElementById("ageResult").innerText = "Please enter your age.";
+      } else {
+        document.getElementById("ageResult").innerText = `You are ${age} years old.`;
+      }
+    }
+  </script>
+</body>
+</html>

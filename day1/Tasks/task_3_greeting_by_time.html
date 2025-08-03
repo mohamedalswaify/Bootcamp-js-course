@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 - Greeting by Time</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3ff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 3: Greeting Based on Time</h2>
+
+  <button onclick="greetByTime()">Greet Me</button>
+  <div id="greeting" class="output"></div>
+
+  <script>
+    function greetByTime() {
+      const hour = new Date().getHours();
+      let greeting = "";
+
+      if (hour < 12) {
+        greeting = "Good Morning";
+      } else if (hour < 18) {
+        greeting = "Good Afternoon";
+      } else {
+        greeting = "Good Evening";
+      }
+
+      document.getElementById("greeting").innerText = greeting;
+    }
+  </script>
+</body>
+</html>

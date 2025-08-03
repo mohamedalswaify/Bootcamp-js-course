@@ -1,0 +1,12 @@
+<script>
+    var m1 = parseFloat(prompt("Enter a mark: "));
+    var m2 = parseFloat(prompt("Enter a mark: "));
+    var m3 = parseFloat(prompt("Enter a mark: "));
+
+    var avg = (m1 + m2 + m3) / 3;
+
+    document.write("<h1>Average mark: ", Math.round(avg * 100) / 100, "</h1>");
+    document.write("<h1>Best mark: ", Math.max(m1, m2, m3), "</h1>");
+    document.write("<h1>Worst mark: ", Math.min(m1, m2, m3),"</h1>");
+
+</script>

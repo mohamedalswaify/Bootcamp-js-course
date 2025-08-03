@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3A - Score Evaluation</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3ff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 3A: Evaluate Score using if Statement</h2>
+
+  <label for="scoreInput">Enter your score:</label>
+  <input type="number" id="scoreInput">
+  <button onclick="checkScore()">Check Result</button>
+
+  <div id="scoreResult" class="output"></div>
+
+  <script>
+    function checkScore() {
+      const score = parseInt(document.getElementById("scoreInput").value);
+      let result = "";
+
+      if (isNaN(score)) {
+        result = "Please enter a valid score.";
+      } else if (score >= 90) {
+        result = "Excellent";
+      } else if (score >= 70) {
+        result = "Good Job";
+      } else {
+        result = "Keep Trying";
+      }
+
+      document.getElementById("scoreResult").innerText = result;
+    }
+  </script>
+</body>
+</html>

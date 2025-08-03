@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 - Show All Data</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .output {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3ff;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 2: Show All Data (Name, Age, Email)</h2>
+
+  <label>Name: <input type="text" id="nameInput"></label><br><br>
+  <label>Age: <input type="number" id="ageInput"></label><br><br>
+  <label>Email: <input type="email" id="emailInput"></label><br><br>
+
+  <button onclick="showAllData()">Show All</button>
+
+  <div id="allData" class="output"></div>
+
+  <script>
+    function showAllData() {
+      let name = document.getElementById("nameInput").value;
+      let age = document.getElementById("ageInput").value;
+      let email = document.getElementById("emailInput").value;
+
+      if (!name || !age || !email) {
+        document.getElementById("allData").innerText = "Please fill in all fields.";
+        return;
+      }
+
+      document.getElementById("allData").innerText =
+        `Name: ${name} | Age: ${age} | Email: ${email}`;
+    }
+  </script>
+</body>
+</html>
