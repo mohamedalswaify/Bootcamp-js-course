@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1 – Toggle CSS Class</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p id="para">Click the button to toggle highlight!</p>
+  <button id="btn">Toggle Highlight</button>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      document.getElementById("para").classList.toggle("highlight");
+    });
+  </script>
+</body>
+</html>

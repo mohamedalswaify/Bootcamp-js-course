@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 - Loop Over Student Data</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 5: Loop and Display Student Data</h2>
+
+  <table id="studentsTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script>
+    const students = [
+      { name: "Sara", age: 20, grade: "A" },
+      { name: "Ali", age: 22, grade: "B+" },
+      { name: "Lina", age: 19, grade: "A-" },
+      { name: "Omar", age: 21, grade: "B" }
+    ];
+
+    const tableBody = document.querySelector("#studentsTable tbody");
+
+    for (let i = 0; i < students.length; i++) {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${students[i].name}</td>
+        <td>${students[i].age}</td>
+        <td>${students[i].grade}</td>
+      `;
+
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>

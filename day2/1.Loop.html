@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Loop Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    ul {
+      background-color: #f9f9f9;
+      padding: 10px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Loop Example: Display Numbers 1 to 5</h2>
+  <ul id="numberList"></ul>
+
+  <script>
+    const list = document.getElementById("numberList");
+
+    for (let i = 1; i <= 5; i++) {
+      const item = document.createElement("li");
+      item.textContent = "Number: " + i;
+      list.appendChild(item);
+    }
+  </script>
+</body>
+</html>

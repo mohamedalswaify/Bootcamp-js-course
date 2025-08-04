@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 – JSON From Array</title>
+</head>
+<body>
+  <h3>Users from Array</h3>
+  <table border="1">
+    <thead><tr><th>Name</th><th>Email</th></tr></thead>
+    <tbody id="userTable"></tbody>
+  </table>
+
+  <script>
+    const users = [
+      { name: "Ali Ahmed", email: "ali@example.com" },
+      { name: "Sara Mostafa", email: "sara@example.com" },
+      { name: "Omar Khalid", email: "omar@example.com" },
+      { name: "Lina Hussein", email: "lina@example.com" }
+    ];
+
+    const tbody = document.getElementById("userTable");
+    users.forEach(user => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${user.name}</td><td>${user.email}</td>`;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>

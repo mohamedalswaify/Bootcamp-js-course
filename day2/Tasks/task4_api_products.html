@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4 – API Cards</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      float: left;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h3>Products</h3>
+  <section id="productList"></section>
+
+  <script>
+    fetch("https://fakestoreapi.com/products")
+      .then(res => res.json())
+      .then(products => {
+        const container = document.getElementById("productList");
+        products.forEach(p => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="\${p.image}" alt="">
+            <h4>\${p.title}</h4>
+            <p>Price: \$\${p.price}</p>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>

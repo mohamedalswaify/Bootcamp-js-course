@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 – Loop Students Table</title>
+</head>
+<body>
+  <h3>Student Grades</h3>
+  <table border="1">
+    <thead><tr><th>Name</th><th>Grade</th></tr></thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+
+  <script>
+    const students = [
+      { name: "Ali", grade: 90 },
+      { name: "Sara", grade: 85 },
+      { name: "Omar", grade: 78 }
+    ];
+
+    const tbody = document.getElementById("studentTable");
+    students.forEach(s => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${s.name}</td><td>${s.grade}</td>`;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>

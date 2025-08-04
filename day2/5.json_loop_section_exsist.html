@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 8 - JSON Loop in Existing Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 8: Loop Over JSON and Insert into Existing Section</h2>
+  <section id="teamSection"></section>
+
+  <script>
+    const team = [
+      { name: "Ali", job: "Developer", city: "Riyadh" },
+      { name: "Sara", job: "Designer", city: "Jeddah" },
+      { name: "Omar", job: "Manager", city: "Dammam" },
+      { name: "Lina", job: "Engineer", city: "Makkah" }
+    ];
+
+    const section = document.getElementById("teamSection");
+
+    team.forEach(member => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <h3>${member.name}</h3>
+        <p><strong>Job:</strong> ${member.job}</p>
+        <p><strong>City:</strong> ${member.city}</p>
+      `;
+      section.appendChild(card);
+    });
+  </script>
+</body>
+</html>
