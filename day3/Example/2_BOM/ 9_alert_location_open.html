@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM - Alert & Location</title>
+</head>
+<body>
+    <button onclick="showAlert()">عرض تنبيه</button>
+    <button onclick="goToGoogle()">اذهب إلى Google</button>
+    <button onclick="openWindow()">افتح نافذة جديدة</button>
+
+    <script>
+    function showAlert() {
+      alert("مرحبًا بك في دورة JavaScript!"); // ✅ يظهر تنبيه (مربع حوار)
+    }
+
+    function goToGoogle() {
+      location.href = "https://www.google.com"; // ✅ يوجّه المستخدم إلى Google
+    }
+
+    function openWindow() {
+      window.open("https://example.com", "_blank"); // ✅ يفتح موقع في نافذة جديدة
+    }
+    </script>
+</body>
+</html>

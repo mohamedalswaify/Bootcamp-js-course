@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM - Screen Info</title>
+</head>
+<body>
+    <h2>معلومات الشاشة الخاصة بك</h2>
+    <p id="screenInfo"></p>
+
+    <script>
+    const screenInfo = document.getElementById("screenInfo");
+    screenInfo.innerText =
+      `عرض الشاشة: ${screen.width}px - ارتفاع الشاشة: ${screen.height}px`; // ✅ يعرض أبعاد الشاشة
+    </script>
+</body>
+</html>

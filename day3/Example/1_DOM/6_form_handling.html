@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Handling</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="checkbox" id="agree"> I agree<br>
+        <select id="course">
+            <option value="html">HTML</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual form submission
+
+      const name = document.getElementById('name').value; // get name
+      const gender = document.querySelector('input[name="gender"]:checked').value; // get selected gender
+      const agree = document.getElementById('agree').checked; // get checkbox state
+      const course = document.getElementById('course').value; // get selected course
+
+      console.log(name, gender, agree, course); // expected: logs all values
+    });
+    </script>
+</body>
+</html>

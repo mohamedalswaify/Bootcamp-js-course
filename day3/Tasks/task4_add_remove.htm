@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add/Remove Items</title>
+</head>
+<body>
+    <h2>Task 4: Add and Remove Items</h2>
+    <input type="text" id="itemInput" placeholder="Add item">
+    <button onclick="addItem()">Add</button>
+    <ul id="itemList"></ul>
+
+    <script>
+    function addItem() {
+      const input = document.getElementById('itemInput');
+      if (input.value.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        const btn = document.createElement('button');
+        btn.textContent = 'Delete';
+        btn.onclick = () => li.remove();
+        li.appendChild(btn);
+        document.getElementById('itemList').appendChild(li);
+        input.value = '';
+      }
+    }
+    </script>
+</body>
+</html>

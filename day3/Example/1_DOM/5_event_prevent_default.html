@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Prevent Default</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Name" />
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // prevents page from reloading
+      alert("Form was submitted!"); // expected: shows alert on form submit
+    });
+    </script>
+</body>
+</html>

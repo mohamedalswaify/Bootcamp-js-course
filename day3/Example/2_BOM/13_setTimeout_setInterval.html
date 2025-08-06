@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM - Timeout & Interval</title>
+</head>
+<body>
+    <h2>مثال على setTimeout و setInterval</h2>
+    <p id="timeoutMsg"></p>
+    <p id="intervalMsg"></p>
+
+    <script>
+    // ✅ يظهر رسالة بعد 3 ثواني
+    setTimeout(() => {
+      document.getElementById("timeoutMsg").innerText = "تم تنفيذ setTimeout بعد 3 ثواني";
+    }, 3000);
+
+    // ✅ يعد الأرقام كل ثانية
+    let count = 0;
+    setInterval(() => {
+      document.getElementById("intervalMsg").innerText = `عدد الثواني: ${++count}`;
+    }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Child</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li id="removeMe">Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+    const list = document.getElementById('list'); // select the <ul>
+    const itemToRemove = document.getElementById('removeMe'); // get <li> with id 'removeMe'
+    list.removeChild(itemToRemove); // expected: removes <li>Item 2</li> from the DOM
+    </script>
+</body>
+</html>

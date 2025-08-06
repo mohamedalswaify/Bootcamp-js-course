@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Traversing</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>First</li>
+        <li id="second">Second</li>
+        <li>Third</li>
+    </ul>
+    <script>
+    const second = document.getElementById('second'); // selects the <li> with "Second"
+    console.log(second.parentNode);              // expected: <ul id="myList">
+    console.log(second.children);                // expected: []
+    console.log(second.previousElementSibling);  // expected: <li>First</li>
+    console.log(second.nextElementSibling);      // expected: <li>Third</li>
+    </script>
+</body>
+</html>

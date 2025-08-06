@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ Toggle</title>
+    <style>
+        .answer {
+            display: none;
+        }
+
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Task 5: Toggle FAQ</h2>
+    <div class="faq">
+        <div class="question">What is JavaScript?</div>
+        <div class="answer">JavaScript is a programming language used for web development.</div>
+        <div class="question">What is DOM?</div>
+        <div class="answer">DOM stands for Document Object Model.</div>
+    </div>
+
+    <script>
+    document.querySelectorAll('.question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('answer');
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Character Counter</title>
+</head>
+<body>
+    <h2>Task 1: Live Character Counter</h2>
+    <textarea id="textArea" maxlength="100" rows="5" cols="30"></textarea>
+    <p>Remaining characters: <span id="charCount">100</span></p>
+
+    <script>
+    const textarea = document.getElementById('textArea');
+    const charCount = document.getElementById('charCount');
+
+    textarea.addEventListener('input', () => {
+      charCount.innerText = 100 - textarea.value.length;
+    });
+    </script>
+</body>
+</html>

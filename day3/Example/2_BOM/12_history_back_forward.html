@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>BOM - History Navigation</title>
+</head>
+<body>
+    <h2>التنقل بين الصفحات</h2>
+    <button onclick="goBack()">⬅️ رجوع</button>
+    <button onclick="goForward()">➡️ للأمام</button>
+
+    <script>
+    function goBack() {
+      history.back(); // ✅ يرجع صفحة للخلف
+    }
+
+    function goForward() {
+      history.forward(); // ✅ يتقدم صفحة للأمام
+    }
+    </script>
+</body>
+</html>

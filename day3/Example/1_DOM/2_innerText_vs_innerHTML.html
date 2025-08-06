@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>innerText vs innerHTML</title>
+</head>
+<body>
+    <div id="myDiv"><b>Hello</b> World!</div>
+    <script>
+        const div = document.getElementById("myDiv"); // gets the div
+        console.log(div.innerText);    // expected: "Hello World!"
+        console.log(div.innerHTML);    // expected: "<b>Hello</b> World!"
+        console.log(div.textContent);  // expected: "Hello World!"
+    </script>
+</body>
+</html>

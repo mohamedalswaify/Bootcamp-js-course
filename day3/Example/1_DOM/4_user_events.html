@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Events</title>
+</head>
+<body>
+    <button id="myBtn">Click Me</button>
+    <input id="myInput" placeholder="Type here...">
+    <script>
+    document.getElementById('myBtn').addEventListener('click', () => {
+      alert("Button clicked!"); // expected: shows alert when button is clicked
+    });
+
+    document.getElementById('myInput').addEventListener('keyup', (e) => {
+      console.log("You typed:", e.target.value); // logs the input value as you type
+    });
+    </script>
+</body>
+</html>
