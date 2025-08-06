@@ -41,6 +41,28 @@
 
 ```javascript
 alert("Welcome!");
+```
+---
+
+#### ✅ Examples of BOM usage:
+
+* Alert message: alert("Welcome!")
+* Redirect: location.href = "https://google.com"
+* Open new window: window.open("https://example.com")
+* Get screen size: console.log(screen.width, screen.height)
+
+#### 🔧 Common BOM Objects:
+
+* window – The global browser window
+* navigator – Info about the browser/device
+* location – URL and redirection
+* history – Browsing history navigation
+* screen – Screen size and resolution
+* alert(), confirm(), prompt()
+* setTimeout(), setInterval()
+
+---
+
 
 
 
